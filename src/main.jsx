@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
@@ -9,23 +9,30 @@ import Root from './Layout/Root/Root';
 import Home from './Pages/Home/Home';
 import Timeline from './Pages/TimeLine/Timeline';
 import Stats from './Pages/Stats/Stats';
+import CardDetails from './Components/Home/CardDetails';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
         index: true,
-        element: <Home></Home>,
+        element: <Suspense fallback={'loding'}><Home></Home></Suspense>,
+        loader: () => fetch('/FriendData.json')
       },
       {
-        path  :"/Timeline",
+        path: "/Timeline",
         element: <Timeline></Timeline>,
       },
       {
-        path:"/Stats",
+        path: "/Stats",
         element: <Stats></Stats>,
+      },
+      {
+        path: "/cardDetails/:id",
+        Component: CardDetails,
+        loader: () => fetch('/FriendData.json')
       }
     ],
     errorElement: <h4>this page no g</h4>
