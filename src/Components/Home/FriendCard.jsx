@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useLoaderData } from 'react-router';
 import FriendsDetalis from './FriendsDetalis';
 
@@ -10,8 +10,8 @@ const FriendCard = () => {
             <h1 className='text-xl font-bold'>Yours Friends</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-4">
                 {
-                    friendsData.map((detalis,index)=> (
-                        <FriendsDetalis key={index} detalis={detalis}></FriendsDetalis>
+                    friendsData.map((details,index)=> (
+                        <FriendsDetalis key={index} details={details}></FriendsDetalis>
 
                     ))
                 }

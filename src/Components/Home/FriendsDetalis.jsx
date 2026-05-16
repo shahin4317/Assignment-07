@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 
-const FriendsDetalis = ({ detalis }) => {
-    const { id,name, picture, days_since_contact, tags, status } = detalis;
+const FriendsDetalis = ({ details }) => {
+    const { id,name, picture, days_since_contact, tags, status } = details;
 
     return (
         <Link to={`/cardDetails/${id}`} className="container mx-auto ">

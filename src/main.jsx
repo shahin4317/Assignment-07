@@ -10,6 +10,11 @@ import Home from './Pages/Home/Home';
 import Timeline from './Pages/TimeLine/Timeline';
 import Stats from './Pages/Stats/Stats';
 import CardDetails from './Components/Home/CardDetails';
+import ErrorPage from './Pages/error page/ErrorPage';
+import FriendsProvider from './Context/FriendContex';
+import { ToastContainer } from 'react-toastify';
+
+
 
 const router = createBrowserRouter([
   {
@@ -35,11 +40,19 @@ const router = createBrowserRouter([
         loader: () => fetch('/FriendData.json')
       }
     ],
-    errorElement: <h4>this page no g</h4>
+    errorElement:<ErrorPage></ErrorPage>
   },
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+      <FriendsProvider>
+        <RouterProvider router={router} />
+        <ToastContainer></ToastContainer>
+
+      </FriendsProvider>
+      
+
+   
+    
   </StrictMode>,
 )
