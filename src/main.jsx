@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Suspense fallback={'loding'}><Home></Home></Suspense>,
+        element: <Home></Home>,
         loader: () => fetch('/FriendData.json')
       },
       {
