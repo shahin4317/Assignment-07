@@ -22,23 +22,23 @@ const CardSummary = () => {
                 </div>
 
                 <div className="bg-base-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
-                    <h1 className="text-xl font-semibold mb-2 text-center">32</h1>
+                    <h1 className="text-xl font-semibold mb-2 text-center">3</h1>
                     <p className="text-base-content/70 font-medium text-center">
-                        Pending Contacts
+                        On Track
                     </p>
                 </div>
 
                 <div className="bg-base-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
-                    <h1 className="text-xl font-semibold mb-2 text-center">18</h1>
+                    <h1 className="text-xl font-semibold mb-2 text-center">6</h1>
                     <p className="text-base-content/70 font-medium text-center">
-                        Overdue
+                        Need Attention
                     </p>
                 </div>
 
                 <div className="bg-base-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
-                    <h1 className="text-xl font-semibold mb-2 text-center">76%</h1>
+                    <h1 className="text-xl font-semibold mb-2 text-center">12</h1>
                     <p className="text-base-content/70 font-medium text-center">
-                        Relationship Score
+                       Interactions This Month
                     </p>
                 </div>
 
